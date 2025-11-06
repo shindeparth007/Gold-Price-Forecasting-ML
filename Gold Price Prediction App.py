@@ -6,11 +6,11 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from datetime import timedelta
 
-st.set_page_config(page_title="Gold Price Predictor (Fixed CSV)", layout="wide")
-st.title("🪙 Gold Price Predictor (Fixed CSV only)")
+st.set_page_config(page_title="Gold Price Predictor ", layout="wide")
+st.title("🪙 Gold Price Predictor ")
 st.caption("Data source is locked to **gold_price_predictions_final.csv** — no other files allowed.")
 
-CSV_PATH = "gold_price_predictions_final.csv"  # Local file next to this script
+CSV_PATH = "gold_price_predictions_final.csv"  
 
 def friendly_error_box(e: Exception):
     st.error("Something went wrong. See details below.")
