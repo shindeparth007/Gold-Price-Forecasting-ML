@@ -8,7 +8,7 @@ from datetime import timedelta
 
 st.set_page_config(page_title="Gold Price Predictor ", layout="wide")
 st.title("🪙 Gold Price Predictor ")
-st.caption("Data source is locked to **gold_price_predictions_final.csv** — no other files allowed.")
+
 
 CSV_PATH = "gold_price_predictions_final.csv"  
 
@@ -211,5 +211,3 @@ if st.button("Predict for selected date"):
         st.success(f"Predicted Price on {tstamp.date().isoformat()}: **{yhat:,.2f}**")
     except Exception as e:
         friendly_error_box(e)
-
-st.caption("Fixes: (1) Drops 'Date' from features, (2) Enforces training feature order during prediction, (3) Casts features to float to avoid Timestamp errors.")
